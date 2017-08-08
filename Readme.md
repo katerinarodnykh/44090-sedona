@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Екатерина Родных](https://up.htmlacademy.ru/htmlcss/18/user/44090).
-* Наставник: `Сергей Рубец`.
+* Наставник: [Сергей Рубец](https://htmlacademy.ru/profile/amator).
 
 ---
 
