@@ -7,20 +7,20 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="logo"><img src="img/logo.png" width="138" height="70" alt="Логотип города Седона"></a>
+      <a class="logo"><img src="img/logo.png" width="138" height="70" alt="Логотип города Седона">Логотип города Седона</a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a href="#">Информация</a>
+            <a href="/info.com">Информация</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Фото и видео</a>
+            <a href="/photo-video.com">Фото и видео</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Карта штата</a>
+            <a href="/map.com">Карта штата</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Гостиницы</a>
+            <a href="/hotels.com">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -104,29 +104,35 @@
       <section class="hotels">
         <h2 class="hotels-title">Заинтересовались?</h2>
         <p class="hotels-tip">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button hotels-button" href="#" title="Форма поиска гостиниц">Поиск гостиницы в Седоне</a>
+        <a class="button hotels-button" href="/search-hotels.com" title="Форма поиска гостиниц">Поиск гостиницы в Седоне</a>
       </section>
       <section class="modal modal-search">
-        <h2 class="search-title">Поиск гостиниц в Седоне</h2>
-        <form class="search-form" action="#" method="post">
-          <label class="search-form-item" for="date-in">Дата заезда:
-            <input type="text" name="date-in" id="date-in" placeholder="24 апреля 2017">
+        <h2 class="visually-hidden search-title">Поиск гостиницы в Седоне</h2>
+        <form class="search-form" action="/sedona-form.com" method="post">
+          <label class="form-item-label" for="date-in">Дата заезда:
+            <input class="search-form-item" type="text" name="date-in" id="date-in" placeholder="24 апреля 2017">
           </label>
-          <label class="search-form-item" for="date-out">Дата выезда:
-            <input type="text" name="date-out" id="date-out" placeholder="4 июля 2017">
+          <label class="form-item-label" for="date-out">Дата выезда:
+            <input class="search-form-item" type="text" name="date-out" id="date-out" placeholder="4 июля 2017">
           </label>
-          <label class="search-form-item" for="adults">Взрослые
-            <input type="number" name="adults" id="adults" min="1" max="infinite" step="1">
+          <label class="form-item-label" for="adults">Взрослые
+            <button class="button button-search-item" type="button">Уменьшить количество на 1 единицу</button>
+            <input class="search-form-item" type="text" name="adults" id="adults" placeholder="2">
+            <button class="button button-search-item" type="button" type="button">Увеличить количество на 1 единицу</button>
           </label>
-          <label class="search-form-item" for="children">Дети:
-            <input type="number" name="children" id="children" min="1" max="infinite" step="1">
+          <label class="form-item-label" for="children">Дети:
+            <button class="button button-search-item" type="button">Уменьшить количество на 1 единицу</button>
+            <input class="search-form-item" type="text" name="children" id="children" placeholder="0">
+            <button class="button button-search-item" type="button">Увеличить количество на 1 единицу</button>
           </label>
           <button class="button button-search" type="submit">Найти</button>
         </form>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны"
+        <p>
+          <img src="img/map.jpg" width="1200" height="593" alt="Карта штата с отметкой города Седона">
+        </p>
       </section>
     </main>
     <footer class="main-footer">
@@ -134,18 +140,18 @@
       <div class="footer-social">
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-button" href="#">Твиттер</a>
+            <a class="social-button" href="https://twitter.com/sedona"target="_blank">Твиттер</a>
           </li>
           <li class="social-item">
-            <a class="social-button" href="#">Фейсбук</a>
+            <a class="social-button" href="https://www.facebook.com/sedona" target="_blank">Фейсбук</a>
           </li>
           <li class="social-item">
-            <a class="social-button" href="#">Ютуб</a>
+            <a class="social-button" href="https://www.youtube.com/sedona" target="_blank">Ютуб</a>
           </li>
         </ul>
       </div>
       <div class="footer-copyright">
-        <span>website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></span>
+        <span>website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">html academy</a></span>
       </div>
     </footer>
   </body>

@@ -7,20 +7,20 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="logo"><img src="img/logo.png" width="138" height="70" alt="Логотип города Седона"></a>
+      <a class="logo"><img src="img/logo.png" width="138" height="70" alt="Логотип города Седона">Логотип города Седона</a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a href="#">Информация</a>
+            <a href="/info.com">Информация</a>
           </li>
           <li class="navigation-item">
-            <a href="#">Фото и видео</a>
+            <a href="/photo-video.com">Фото и видео</a>
           </li>
           <li class="navigation-item">
             <a href="#">Карта штата</a>
           </li>
           <li class="navigation-item navigation-current">
-            <a >Гостиницы</a>
+            <a>Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -29,24 +29,24 @@
       <h1 class="visually-hidden">Гостиницы Седоны</h1>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр для поиска гостиниц</h2>
-        <form class="filter-form" action="" method="get">
+        <form class="filter-form" action="/sedona-filter-form.com" method="get">
           <fieldset class="filter-infrastructure">
             <legend>Инфраструктура:</legend>
             <ul class="filter-infrastructure-list">
               <li class="infrastructure-option">
-                <label for="pool">
+                <label class="filter-label" for="pool">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="infrastructure-option">
-                <label for="parking">
+                <label class="filter-label" for="parking">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
                   Парковка
                 </label>
               </li>
               <li class="infrastructure-option">
-                <label for="wifi">
+                <label class="filter-label" for="wifi">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi" id="wifi">
                   Wi-Fi
                 </label>
@@ -57,19 +57,19 @@
             <legend>Тип жилья:</legend>
             <ul class="filter-type-list">
               <li class="type-option">
-                <label for="hotel">
+                <label class="filter-label" for="hotel">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="type-option">
-                <label for="motel">
+                <label class="filter-label" for="motel">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
                   Мотель
                 </label>
               </li>
               <li class="type-option">
-                <label for="apartments">
+                <label class="filter-label" for="apartments">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="apartments" checked>
                   Апартаменты
                 </label>
@@ -96,22 +96,23 @@
           <h3>Сортировка:</h3>
           <ul class="sorting-list">
             <li class="sorting-item sorting-current">
+              <!--сортировка это ссылки или кнопки(button type="button")? перехода на другую страницу по сути нет, но меняются результаты выдачи-->
               <a>По цене</a>
             </li>
             <li class="sorting-item">
-              <a href="#">По типу</a>
+              <a href="/type-sorting-results.com">По типу</a>
             </li>
             <li class="sorting-item">
-              <a href="#">По рейтингу</a>
+              <a href="/rating-sorting-results.com">По рейтингу</a>
             </li>
           </ul>
         </div>
         <div class="sorting-ranging">
           <div class="sorting-to-maximum">
-            <a href="" title="Сортировка от минимального к максимальному"></a>
+            <button class="button button-sorting button-sorting-up">Сортировка от минимального к максимальному</button>
           </div>
           <div class="sorting-to-minimum">
-            <a href="" title="Сортировка от максимального к минимальному"></a>
+            <button class="button button-sorting button-sorting-down">Сортировка от максимального к минимальному</button>
           </div>
         </div>
       </section>
@@ -125,8 +126,8 @@
               <span>Гостиница</span>
               <span>от 4000 р.</span>
             </div>
-            <a class="button hotels-details-button" href="#">Подробнее</a>
-            <a class="button hotels-reservation-button" href="#">Забронировать</a>
+            <a class="button hotels-details-button" href="/hotel-info.com">Подробнее</a>
+            <a class="button hotels-reservation-button" href="/reservation.com">Забронировать</a>
             <ul class="hotels-stars">
                 <li class="hotels-stars-item"></li>
                 <li class="hotels-stars-item"></li>
@@ -144,8 +145,8 @@
               <span>Мотель</span>
               <span>от 3000 р.</span>
             </div>
-            <a class="button hotels-details-button" href="#">Подробнее</a>
-            <a class="button hotels-reservation-button" href="#">Забронировать</a>
+            <a class="button hotels-details-button" href="/hotel-info.com">Подробнее</a>
+            <a class="button hotels-reservation-button" href="/reservation.com">Забронировать</a>
             <ul class="hotels-stars">
                 <li class="hotels-stars-item"></li>
                 <li class="hotels-stars-item"></li>
@@ -162,8 +163,8 @@
               <span>Апартаменты</span>
               <span>от 2000 р.</span>
             </div>
-            <a class="button hotels-details-button" href="#">Подробнее</a>
-            <a class="button hotels-reservation-button" href="#">Забронировать</a>
+            <a class="button hotels-details-button" href="/hotel-info.com">Подробнее</a>
+            <a class="button hotels-reservation-button" href="/reservation.com">Забронировать</a>
             <ul class="hotels-stars">
                 <li class="hotels-stars-item"></li>
                 <li class="hotels-stars-item"></li>
@@ -180,18 +181,18 @@
       <div class="footer-social">
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-button" href="#">Твиттер</a>
+            <a class="social-button" href="https://twitter.com/sedona"target="_blank">Твиттер</a>
           </li>
           <li class="social-item">
-            <a class="social-button" href="#">Фейсбук</a>
+            <a class="social-button" href="https://www.facebook.com/sedona" target="_blank">Фейсбук</a>
           </li>
           <li class="social-item">
-            <a class="social-button" href="#">Ютуб</a>
+            <a class="social-button" href="https://www.youtube.com/sedona" target="_blank">Ютуб</a>
           </li>
         </ul>
       </div>
       <div class="footer-copyright">
-        <span>website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></span>
+        <span>website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">html academy</a></span>
       </div>
     </footer>
   </body>
