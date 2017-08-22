@@ -34,20 +34,20 @@
             <legend>Инфраструктура:</legend>
             <ul class="filter-infrastructure-list">
               <li class="infrastructure-option">
-                <label class="filter-label" for="pool">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
+                <label class="filter-label">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="infrastructure-option">
-                <label class="filter-label" for="parking">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
+                <label class="filter-label">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking">
                   Парковка
                 </label>
               </li>
               <li class="infrastructure-option">
-                <label class="filter-label" for="wifi">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi" id="wifi">
+                <label class="filter-label">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi">
                   Wi-Fi
                 </label>
               </li>
@@ -57,20 +57,20 @@
             <legend>Тип жилья:</legend>
             <ul class="filter-type-list">
               <li class="type-option">
-                <label class="filter-label" for="hotel">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                <label class="filter-label">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="type-option">
-                <label class="filter-label" for="motel">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
+                <label class="filter-label">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" checked>
                   Мотель
                 </label>
               </li>
               <li class="type-option">
-                <label class="filter-label" for="apartments">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+                <label class="filter-label">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" checked>
                   Апартаменты
                 </label>
               </li>
@@ -96,7 +96,6 @@
           <h3>Сортировка:</h3>
           <ul class="sorting-list">
             <li class="sorting-item sorting-current">
-              <!--сортировка это ссылки или кнопки(button type="button")? перехода на другую страницу по сути нет, но меняются результаты выдачи-->
               <a>По цене</a>
             </li>
             <li class="sorting-item">
@@ -109,10 +108,10 @@
         </div>
         <div class="sorting-ranging">
           <div class="sorting-to-maximum">
-            <button class="button button-sorting button-sorting-up">Сортировка от минимального к максимальному</button>
+            <a class="button button-sorting button-sorting-up" href="/sorting-up-resuts.com">Сортировка от минимального к максимальному</a>
           </div>
           <div class="sorting-to-minimum">
-            <button class="button button-sorting button-sorting-down">Сортировка от максимального к минимальному</button>
+            <a class="button button-sorting button-sorting-down" href="/sorting-down-results.com">Сортировка от максимального к минимальному</a>
           </div>
         </div>
       </section>
