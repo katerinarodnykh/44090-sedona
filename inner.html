@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Гостиницы Седоны</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <a class="logo"><img src="img/logo.png" width="138" height="70" alt="Логотип города Седона">Логотип города Седона</a>
       <nav class="navigation">
@@ -79,8 +81,7 @@
           <fieldset class="filter-price">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="price-range">
-              <div>от 0</div>
-              <div>до 3000</div>
+              <div>от 0 до 3000</div>
             </div>
             <input type="range" min="0" max="3000" step="">
           </fieldset>
@@ -115,11 +116,13 @@
           </div>
         </div>
       </section>
-      <section class="hotels">
+      <section class="hotels-inner">
         <h2 class="visually-hidden">Список результатов поиска</h2>
         <ul class="hotels-results">
           <li class="hotels-item">
-            <h3 class="hotels-item-title">Amara resort &amp; spa</h3>
+            <h3 class="hotels-item-title">
+              <a href="/amara.com">Amara resort &amp; spa</a>
+            </h3>
             <img src="img/hotels-top.jpg" width="135" height="90" alt="Фото гостиницы Amara resort &amp; spa">
             <div class="price-info">
               <span>Гостиница</span>
@@ -138,7 +141,9 @@
             </div>
           </li>
           <li class="hotels-item">
-            <h3 class="hotels-item-title">Desert quail inn</h3>
+            <h3 class="hotels-item-title">
+              <a href="/desert.com">Desert quail inn</a>
+            </h3>
             <img src="img/hotels-middle.jpg" width="135" height="90" alt="Фото мотеля Desert quail inn">
             <div class="price-info">
               <span>Мотель</span>
@@ -156,7 +161,9 @@
             </div>
           </li>
           <li class="hotels-item">
-            <h3 class="hotels-item-title">Villas at poco diablo</h3>
+            <h3 class="hotels-item-title">
+              <a href="/villas.com">Villas at poco diablo</a>
+            </h3>
             <img src="img/hotels-bottom.jpg" width="135" height="90" alt="Фото апартаментов Villas at poco diablo">
             <div class="price-info">
               <span>Апартаменты</span>
@@ -191,7 +198,9 @@
         </ul>
       </div>
       <div class="footer-copyright">
-        <span>website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">html academy</a></span>
+        <span>website by
+          <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">html academy</a>
+        </span>
       </div>
     </footer>
   </body>
