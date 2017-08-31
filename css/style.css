@@ -72,7 +72,9 @@ a{
 
 .main-header .logo{
   position:absolute;
-  left:528px;
+  left:50%;
+  margin-left:-69px;
+  /*либо left: calc(50%-69px);*/
 }
 
 .navigation{
@@ -90,6 +92,8 @@ a{
 }
 
 .navigation-list{
+  margin:0;
+  padding:0;
   display:flex;
 }
 
@@ -102,6 +106,8 @@ a{
 .sorting-list,
 .hotels-results,
 .hotels-stars{
+  margin:0;
+  padding:0;
   list-style:none;
 }
 
@@ -173,8 +179,7 @@ a{
   padding:0;
 }
 
-.reasons-first,
-.reasons-second{
+.reasons{
   text-align:center;
   background-color:#81b3d2;
 
@@ -449,12 +454,9 @@ a{
   justify-content:center;
 }
 
-.inner-page .logo{
-  position:absolute;
-  left:533px;
-}
-
 .inner-page .navigation{
+  margin:0;
+  padding:0;
   width:1056px;
 }
 
