@@ -58,6 +58,7 @@ body{
 }
 
 .container{
+  position:relative;
   margin:0 auto;
   width:1200px;
   background-color:#ffffff;
@@ -76,6 +77,20 @@ img{
 }
 
 /*Главная страница*/
+
+.navigation-list,
+.reasons-recomendation-list,
+.reasons-others-list,
+.social-list,
+.filter-infrastructure-list,
+.filter-type-list,
+.sorting-list,
+.hotels-results,
+.hotels-stars{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
 
 .main-header{
   min-height:56px;
@@ -100,8 +115,6 @@ img{
 }
 
 .navigation-list{
-  margin:0;
-  padding:0;
   margin-left:72px;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -114,24 +127,7 @@ img{
   width:100%;
 }
 
-.navigation-list,
-.reasons-recomendation-list,
-.reasons-others-list,
-.social-list,
-.filter-infrastructure-list,
-.filter-type-list,
-.sorting-list,
-.hotels-results,
-.hotels-stars{
-  margin:0;
-  padding:0;
-  list-style:none;
-}
-
 .navigation-list a{
-  display:block;
-  padding-top:15px;
-  padding-bottom:14px;
   color:#000000;
 }
 
@@ -145,37 +141,15 @@ img{
 
 .navigation-item{
   width:20%;
+  padding-top:15px;
+  padding-bottom:14px;
 }
 
-.navigation-item:nth-child(4n+3),
-.navigation-item:nth-child(4n+4){
-  text-align:right;
-}
-
-.navigation-item:nth-child(4n+3){
-  -webkit-box-sizing:content-box;
-          box-sizing:content-box;
-  margin-left:95px;
-}
-
-.navigation-item:nth-child(4n+1){
-  -webkit-box-sizing:content-box;
-          box-sizing:content-box;
-  margin-left:72px;
-}
-
-.navigation-item:nth-child(-4n-3),
-.navigation-item:nth-child(-4n-4){
+.navigation-left{
   text-align:left;
 }
 
-.navigation-info,
-.navigation-gallery{
-  text-align:left;
-}
-
-.navigation-map,
-.navigation-hotels{
+.navigation-right{
   text-align:right;
 }
 
@@ -518,7 +492,6 @@ img{
 .modal{
   margin:0;
   padding:0;
-  position:relative;
 }
 
 .modal-search{
@@ -544,6 +517,7 @@ img{
   font-weight:700;
   color:#000000;
   text-transform:uppercase;
+  opacity:1;
 }
 
 .search-form-item{
@@ -571,6 +545,16 @@ img{
   float:left;
 }
 
+/*для выравнивания в IE*/
+.search-form-date-in input{
+  margin-left:22px;
+}
+
+.search-form-date-out input{
+  margin-left:19px;
+}
+/*end*/
+
 .search-form-adults label{
   padding-right:41px;
 }
@@ -585,7 +569,7 @@ img{
 }
 
 .search-form-item input{
-  margin:0;
+  /*margin:0;*/
   padding:0;
   width:346px;
   height:38px;
@@ -593,15 +577,23 @@ img{
   border:none;
 }
 
-.search-form-item input::-webkit-input-placeholder,
-.search-form-item input::-moz-placeholder,
-.search-form-item input:-ms-input-placeholder,
-.search-form-item input:-moz-placeholder,
-.search-form-item input::placeholder{
-  line-height:26px;
-  font-weight:700;
+.search-form-item input::-webkit-input-placeholder{
   color:#000000;
-  text-transform:uppercase;
+  opacity:1;
+}
+
+.search-form-item input:-moz-placeholder{
+  color:#000000;
+  opacity:1;
+}
+
+.search-form-item input::-moz-placeholder{
+  color:#000000;
+  opacity:1;
+}
+
+.search-form-item input:-ms-input-placeholder{
+  color:#000000;
 }
 
 .search-form-item input:hover{
@@ -609,9 +601,10 @@ img{
 }
 
 .search-form-item input:focus{
-  outline:none;
+  -webkit-box-shadow:inset 0 0 2px grey;
+          box-shadow:inset 0 0 2px grey;
   background-color:#ffffff;
-  border:2px solid #e5e5e5;
+  outline:none;
 }
 
 .search-form-adults input,
@@ -675,6 +668,7 @@ img{
 }
 
 .map{
+  position:relative;
   text-align:center;
   margin:0;
   padding:0;
@@ -702,10 +696,6 @@ img{
   background-color:transparent;
 }
 
-.index-footer-wrap{
-  position:relative;
-}
-
 .index-footer{
   position:absolute;
   width:100%;
@@ -729,13 +719,10 @@ img{
   -webkit-box-pack:center;
       -ms-flex-pack:center;
           justify-content:center;
-  padding:20px;
-  text-align:center;
+  padding:34px 0;/*для выравнивания в IE*/
 }
 
 .social-list{
-  margin:auto auto;
-  padding:0;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -744,6 +731,9 @@ img{
   -webkit-box-pack:center;
       -ms-flex-pack:center;
           justify-content:center;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
 }
 
 .social-button{
@@ -1016,6 +1006,25 @@ img{
   font:inherit;
   background:none;
   border:none;
+}
+
+.filter-price-controls input::-webkit-input-placeholder{
+  color:#ffffff;
+  opacity:1;
+}
+
+.filter-price-controls input:-moz-placeholder{
+  color:#ffffff;
+  opacity:1;
+}
+
+.filter-price-controls input::-moz-placeholder{
+  color:#ffffff;
+  opacity:1;
+}
+
+.filter-price-controls input:-ms-input-placeholder{
+  color:#ffffff;
 }
 
 .filter-range-controls{
@@ -1293,10 +1302,13 @@ img{
 .price-info-left{
   display:block;
   min-width:108px;
+  max-width:186px;
 }
 
 .price-info-right{
+  display:block;
   margin-left:8px;
+  max-width:186px;
 }
 
 .hotels-details-button,
@@ -1368,6 +1380,7 @@ img{
           justify-content:flex-end;
   -ms-flex-wrap:wrap;
       flex-wrap:wrap;
+  padding-bottom:20px;
 }
 
 .hotels-stars-item{
