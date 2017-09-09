@@ -321,6 +321,7 @@ img{
 .reasons-recomendation-item{
   margin:0;
   padding:0;
+  padding-top:48px;
   text-align:center;
   width:400px;
   min-height:331px;
@@ -337,8 +338,8 @@ img{
 }
 
 .reasons-title-recomendation{
-  padding-top:160px;
   position:relative;
+  padding-top:112px;
 }
 
 .reasons-title-house::before{
@@ -350,7 +351,7 @@ img{
   background-repeat:no-repeat;
   background-position:50% 50%;
   top:50%;
-  margin-top:-40px;
+  margin-top:-65px;
   left:50%;
   margin-left:-40px;
 }
@@ -364,7 +365,7 @@ img{
   background-repeat:no-repeat;
   background-position:50% 50%;
   top:50%;
-  margin-top:-40px;
+  margin-top:-65px;
   left:50%;
   margin-left:-42px;
 }
@@ -378,7 +379,7 @@ img{
   background-repeat:no-repeat;
   background-position:50% 50%;
   top:50%;
-  margin-top:-46px;
+  margin-top:-71px;
   left:50%;
   margin-left:-32px;
 }
@@ -545,7 +546,6 @@ img{
   float:left;
 }
 
-/*для выравнивания в IE*/
 .search-form-date-in input{
   margin-left:22px;
 }
@@ -553,7 +553,6 @@ img{
 .search-form-date-out input{
   margin-left:19px;
 }
-/*end*/
 
 .search-form-adults label{
   padding-right:41px;
@@ -569,8 +568,7 @@ img{
 }
 
 .search-form-item input{
-  /*margin:0;*/
-  padding:0;
+  padding-left:10px;
   width:346px;
   height:38px;
   background-color:#f2f2f2;
@@ -611,6 +609,7 @@ img{
 .search-form-children input{
   width:38px;
   height:38px;
+  padding-left:0px;
 }
 
 .search-form-adults input[placeholder],
@@ -719,7 +718,7 @@ img{
   -webkit-box-pack:center;
       -ms-flex-pack:center;
           justify-content:center;
-  padding:34px 0;/*для выравнивания в IE*/
+  padding:34px 0;
 }
 
 .social-list{
@@ -904,6 +903,10 @@ img{
   margin-bottom:25px;
 }
 
+.checkbox-indicator{
+  line-height:0px;
+}
+
 .filter-label input[type="checkbox"] + .checkbox-indicator{
   position:absolute;
   top:-2px;
@@ -913,8 +916,8 @@ img{
 .filter-input:checked + .checkbox-indicator::after{
   content:"";
   position:absolute;
-  width:28px;
-  height:28px;
+  width:26px;
+  height:26px;
   top:0;
   left:0;
   background-image:url("../img/checkbox-on.svg");
