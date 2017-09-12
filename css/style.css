@@ -112,10 +112,12 @@ img{
   background-color:#ffffff;
   min-height:56px;
   width:100%;
+  padding:0 6%;
 }
 
 .navigation-list{
-  margin-left:72px;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -124,7 +126,6 @@ img{
   -webkit-box-pack:start;
       -ms-flex-pack:start;
           justify-content:flex-start;
-  width:100%;
 }
 
 .navigation-list a{
@@ -140,7 +141,7 @@ img{
 }
 
 .navigation-item{
-  width:20%;
+  width:240px;
   padding-top:15px;
   padding-bottom:14px;
 }
@@ -156,7 +157,7 @@ img{
 .navigation-map{
   -webkit-box-sizing:content-box;
           box-sizing:content-box;
-  margin-left:95px;
+  padding-left:96px;
 }
 
 .promo{
@@ -306,11 +307,11 @@ img{
   height:256px;
 }
 
-.reasons-recomendation{
+.reasons-recommendation{
   min-height:331px;
 }
 
-.reasons-recomendation-list{
+.reasons-recommendation-list{
   margin:0;
   padding:0;
   display:-webkit-box;
@@ -318,7 +319,7 @@ img{
   display:flex;
 }
 
-.reasons-recomendation-item{
+.reasons-recommendation-item{
   margin:0;
   padding:0;
   padding-top:48px;
@@ -337,7 +338,7 @@ img{
           align-items:center;
 }
 
-.reasons-title-recomendation{
+.reasons-title-recommendation{
   position:relative;
   padding-top:112px;
 }
@@ -384,7 +385,7 @@ img{
   margin-left:-32px;
 }
 
-.reasons-recomendation .reasons-text{
+.reasons-recommendation .reasons-text{
   padding-top:5px;
 }
 
@@ -496,6 +497,7 @@ img{
 }
 
 .modal-search{
+  display:none;
   position:absolute;
   margin:0;
   padding:55px;
@@ -505,6 +507,89 @@ img{
   -webkit-box-shadow:2px 0px 15px -3px #000000;
           box-shadow:2px 0px 15px -3px #000000;
   background-color:#ffffff;
+  z-index:3;
+}
+
+@-webkit-keyframes popup-show{
+  0%{
+    opacity:0;
+  }
+  30%{
+    -webkit-transform:scale(1.05);
+            transform:scale(1.05)
+  }
+  100%{
+    -webkit-transform:scale(1);
+            transform:scale(1);
+    opacity:1;
+  }
+}
+
+@keyframes popup-show{
+  0%{
+    opacity:0;
+  }
+  30%{
+    -webkit-transform:scale(1.05);
+            transform:scale(1.05)
+  }
+  100%{
+    -webkit-transform:scale(1);
+            transform:scale(1);
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes popup-close{
+  0%{
+    opacity:1;
+  }
+  97%{
+    opacity:0;
+  }
+  100%{
+    z-index:-1;/*портит всю анимацию*/
+  }
+}
+
+@keyframes popup-close{
+  0%{
+    opacity:1;
+  }
+  97%{
+    opacity:0;
+  }
+  100%{
+    z-index:-1;/*портит всю анимацию*/
+  }
+}
+
+.modal-show{
+  display:block;
+  -webkit-animation-name:popup-show;
+          animation-name:popup-show;
+  -webkit-animation-duration:1s;
+          animation-duration:1s;
+  -webkit-animation-timing-function:ease-in;
+          animation-timing-function:ease-in;
+}
+
+.modal-close{
+  display:block;
+  -webkit-animation-name:popup-close;
+          animation-name:popup-close;
+  -webkit-animation-duration:1s;
+          animation-duration:1s;
+  -webkit-animation-timing-function:ease-in;
+          animation-timing-function:ease-in;
+  -webkit-animation-fill-mode:forwards;
+          animation-fill-mode:forwards;
+  position:absolute;
+  /*animation-timing-function: steps(2,step-end);*/
+}
+
+.modal-error{
+  background-color:rgba(255,0,0,0.2)!important;/*eсли поставить !important, то свойство будет срабатывать,если убрать-то нет*/
 }
 
 .search-form{
@@ -567,7 +652,8 @@ img{
   padding-right:26px;
 }
 
-.search-form-item input{
+/*.search-form-item input*/
+.search-form-input{
   padding-left:10px;
   width:346px;
   height:38px;
@@ -674,12 +760,22 @@ img{
   min-height:593px;
 }
 
+.map iframe{
+  position:relative;
+  z-index:2;
+  border: none;
+}
+
 .map p{
   margin:0;
   padding:0;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
 }
 
 .main-footer{
@@ -701,6 +797,7 @@ img{
   left:0;
   bottom:0;
   background-color:rgba(255,255,255,0.85);
+  z-index:3;
 }
 
 .footer-social a{
@@ -831,6 +928,7 @@ img{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
+  padding:0 71px;
 }
 
 .filter-form{
@@ -866,7 +964,7 @@ img{
 
 .filter-form .filter-infrastructure{
   width:241px;
-  margin-left:71px;
+  /*margin-left:71px;*/
 }
 
 .filter-form .filter-type{
@@ -1242,6 +1340,7 @@ img{
   -ms-flex-wrap:wrap;
       flex-wrap:wrap;
   padding-left:73px;
+  padding-right:71px;
   border-bottom:1px solid #e5e5e5;
 }
 

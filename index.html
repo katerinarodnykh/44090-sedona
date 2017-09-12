@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -59,19 +59,19 @@
             <img src="img/reasons-first.jpg" width="800" height="256" alt="Фото Седоны">
           </div>
         </section>
-        <section class="reasons-recomendation">
+        <section class="reasons-recommendation">
           <h2 class="visually-hidden">Рекомендации по жилью, еде и сувенирам</h2>
-          <ul class="reasons-recomendation-list">
-            <li class="reasons-recomendation-item">
-              <h3 class="reasons-title reasons-title-recomendation reasons-title-house">Жильe</h3>
+          <ul class="reasons-recommendation-list">
+            <li class="reasons-recommendation-item">
+              <h3 class="reasons-title reasons-title-recommendation reasons-title-house">Жильe</h3>
               <p class="reasons-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
-            <li class="reasons-recomendation-item">
-              <h3 class="reasons-title reasons-title-recomendation reasons-title-food">Еда</h3>
+            <li class="reasons-recommendation-item">
+              <h3 class="reasons-title reasons-title-recommendation reasons-title-food">Еда</h3>
               <p class="reasons-text reasons-text-food">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
             </li>
-            <li class="reasons-recomendation-item">
-              <h3 class="reasons-title reasons-title-recomendation reasons-title-souvenirs">Сувениры</h3>
+            <li class="reasons-recommendation-item">
+              <h3 class="reasons-title reasons-title-recommendation reasons-title-souvenirs">Сувениры</h3>
               <p class="reasons-text">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
@@ -118,7 +118,7 @@
             <form class="search-form" action="/sedona-form.com" method="post">
               <div class="search-form-item search-form-date search-form-date-in">
                 <label for="date-in">Дата заезда:</label>
-                <input type="text" name="date-in" id="date-in" placeholder="24 апреля 2017">
+                <input class="search-form-input" type="text" name="date-in" id="date-in" placeholder="24 апреля 2017">
                 <div class="search-form-calendar">
                   <p class="visually-hidden">Кнопка появления календаря</p>
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
@@ -128,7 +128,7 @@
               </div>
               <div class="search-form-item search-form-date search-form-date-out">
                 <label for="date-out">Дата выезда:</label>
-                <input type="text" name="date-out" id="date-out" placeholder="4 июля 2017">
+                <input class="search-form-input" type="text" name="date-out" id="date-out" placeholder="4 июля 2017">
                 <div class="search-form-calendar">
                   <p class="visually-hidden">Кнопка появления календаря</p>
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
@@ -144,7 +144,7 @@
                     <rect width="11" height="3" fill="#a9a9a9" x="13" y="18"></rect>
                   </svg>
                 </button>
-                <input type="text" name="adults" id="adults" placeholder="2">
+                <input class="search-form-input" type="text" name="adults" id="adults" placeholder="2">
                 <button class="button button-plus" type="button">
                   <span class="visually-hidden">Увеличить количество на 1 единицу</span>
                   <svg width="38" height="38">
@@ -161,7 +161,7 @@
                     <rect width="11" height="3" fill="#a9a9a9" x="13" y="18"></rect>
                   </svg>
                 </button>
-                <input type="text" name="children" id="children" placeholder="0">
+                <input class="search-form-input" type="text" name="children" id="children" placeholder="0">
                 <button class="button button-plus" type="button">
                   <span class="visually-hidden">Увеличить количество на 1 единицу</span>
                   <svg width="38" height="38">
@@ -176,6 +176,7 @@
             </form>
           </section>
           <h2 class="visually-hidden">Карта</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d839804.4833419473!2d-112.1618443!3d34.6929133!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1505213098827" width="1200" height="588" frameborder="0" style="border:0" allowfullscreen></iframe>
           <p>
             <img src="img/map.jpg" width="1200" height="593" alt="Карта штата с отметкой города Седона">
           </p>
@@ -220,5 +221,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/popup.js"></script>
   </body>
 </html>
