@@ -29,7 +29,7 @@ form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value || !adults.value || !children.value) {
     evt.preventDefault();
     if (!dateIn.value) {
-      dateIn.classList.add("modal-error");
+      dateIn.classList.add("modal modal-error");
     } else {
       dateIn.classList.remove("modal-error");
     }

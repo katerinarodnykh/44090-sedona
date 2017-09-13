@@ -544,11 +544,11 @@ img{
   0%{
     opacity:1;
   }
-  97%{
+  50%{
     opacity:0;
   }
   100%{
-    z-index:-1;/*портит всю анимацию*/
+    left:-9999px;
   }
 }
 
@@ -556,11 +556,11 @@ img{
   0%{
     opacity:1;
   }
-  97%{
+  50%{
     opacity:0;
   }
   100%{
-    z-index:-1;/*портит всю анимацию*/
+    left:-9999px;
   }
 }
 
@@ -586,10 +586,6 @@ img{
           animation-fill-mode:forwards;
   position:absolute;
   /*animation-timing-function: steps(2,step-end);*/
-}
-
-.modal-error{
-  background-color:rgba(255,0,0,0.2)!important;/*eсли поставить !important, то свойство будет срабатывать,если убрать-то нет*/
 }
 
 .search-form{
@@ -659,6 +655,10 @@ img{
   height:38px;
   background-color:#f2f2f2;
   border:none;
+}
+
+.modal .modal-error{
+  background-color:rgba(255,0,0,0.2);/*eсли поставить !important, то свойство будет срабатывать,если убрать-то нет*/
 }
 
 .search-form-item input::-webkit-input-placeholder{
