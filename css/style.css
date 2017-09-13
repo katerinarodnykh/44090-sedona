@@ -497,7 +497,7 @@ img{
 }
 
 .modal-search{
-  display:none;
+  display:block;
   position:absolute;
   margin:0;
   padding:55px;
@@ -538,6 +538,10 @@ img{
             transform:scale(1);
     opacity:1;
   }
+}
+
+.modal-hidden{
+  display:none;
 }
 
 .modal-show{

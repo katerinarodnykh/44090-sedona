@@ -8,6 +8,7 @@ var children = popup.querySelector("[name=children]");
 var storageAdults = localStorage.getItem("adults");
 var storageChildren = localStorage.getItem("children");
 
+popup.classList.add("modal-hidden");
 hotelsButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.toggle("modal-show");
