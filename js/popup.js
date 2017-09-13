@@ -1,35 +1,28 @@
 var hotelsButton = document.querySelector(".hotels-button");
 var popup = document.querySelector(".modal-search");
-
 var form = popup.querySelector("form");
 var dateIn = popup.querySelector("[name=date-in]");
 var dateOut = popup.querySelector("[name=date-out]");
-var aduls = popup.querySelector("[name=adults]");
+var adults = popup.querySelector("[name=adults]");
 var children = popup.querySelector("[name=children]");
-var input = popup.querySelectorAll("input");
 var storageAdults = localStorage.getItem("adults");
 var storageChildren = localStorage.getItem("children");
 
 hotelsButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.add("modal-close");
-  } else {
-        popup.classList.remove("modal-close");
-        popup.classList.add("modal-show");
-        if (storageAdults && storageChildren) {
-          adults.value = storageAdults;
-          children.value = storageChildren;
-        }
-       }
+  popup.classList.toggle("modal-show");
+  if (storageAdults && storageChildren) {
+    adults.value = storageAdults;
+    children.value = storageChildren;
+  }
 });
+
 
 form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value || !adults.value || !children.value) {
     evt.preventDefault();
     if (!dateIn.value) {
-      dateIn.classList.add("modal modal-error");
+      dateIn.classList.add("modal-error");
     } else {
       dateIn.classList.remove("modal-error");
     }
@@ -54,15 +47,7 @@ form.addEventListener("submit", function (evt) {
     dateOut.classList.remove("modal-error");
     adults.classList.remove("modal-error");
     children.classList.remove("modal-error");
-    localStorage.setItem("adults", aduls.value);
+    localStorage.setItem("adults", adults.value);
     localStorage.setItem("children", children.value);
   }
 });
-
-/*просто переключение без modal-close
-var hotelsButton = document.querySelector(".hotels-button");
-var popup = document.querySelector(".modal-search");
-hotelsButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.toggle("modal-show");
-});*/

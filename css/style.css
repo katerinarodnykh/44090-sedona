@@ -540,30 +540,6 @@ img{
   }
 }
 
-@-webkit-keyframes popup-close{
-  0%{
-    opacity:1;
-  }
-  50%{
-    opacity:0;
-  }
-  100%{
-    left:-9999px;
-  }
-}
-
-@keyframes popup-close{
-  0%{
-    opacity:1;
-  }
-  50%{
-    opacity:0;
-  }
-  100%{
-    left:-9999px;
-  }
-}
-
 .modal-show{
   display:block;
   -webkit-animation-name:popup-show;
@@ -574,18 +550,8 @@ img{
           animation-timing-function:ease-in;
 }
 
-.modal-close{
-  display:block;
-  -webkit-animation-name:popup-close;
-          animation-name:popup-close;
-  -webkit-animation-duration:1s;
-          animation-duration:1s;
-  -webkit-animation-timing-function:ease-in;
-          animation-timing-function:ease-in;
-  -webkit-animation-fill-mode:forwards;
-          animation-fill-mode:forwards;
-  position:absolute;
-  /*animation-timing-function: steps(2,step-end);*/
+.modal .modal-error{
+  background-color:rgba(255,0,0,0.2);
 }
 
 .search-form{
@@ -648,17 +614,12 @@ img{
   padding-right:26px;
 }
 
-/*.search-form-item input*/
 .search-form-input{
   padding-left:10px;
   width:346px;
   height:38px;
   background-color:#f2f2f2;
   border:none;
-}
-
-.modal .modal-error{
-  background-color:rgba(255,0,0,0.2);/*eсли поставить !important, то свойство будет срабатывать,если убрать-то нет*/
 }
 
 .search-form-item input::-webkit-input-placeholder{
@@ -964,7 +925,6 @@ img{
 
 .filter-form .filter-infrastructure{
   width:241px;
-  /*margin-left:71px;*/
 }
 
 .filter-form .filter-type{
